@@ -13,12 +13,14 @@
 
 body{
 	background-image: url("Content/Images/Mount_Chocorua.jpg");
-	background-position: auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
-	p {
-		color: blue;
+@media only screen and (max-width: 850px) {
+	body {
+		background-position: center;
 	}
 }
 
@@ -65,8 +67,8 @@ body{
 }
 
 div.header {
-	margin: 0px, 0px, 0px, 25px;
-	padding: 25px;
+	margin-bottom: 20%;
+	padding: 10px;
 	background-color: #002b80;
 }
 

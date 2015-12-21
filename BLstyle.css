@@ -18,9 +18,9 @@ body{
 	background-size: cover;
 }
 
-@media only screen and (max-width: 850px) {
-	body {
-		background-position: center;
+@media only screen and (max-width: 500px) {
+	p {
+		color: black;
 	}
 }
 

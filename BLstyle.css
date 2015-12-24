@@ -82,8 +82,11 @@ button {
 	background-color: #3366ff;
 	margin: 3%;
 	width: 27%;
-	height: 50px;
 	font-size: 16pt;
+}
+
+h3 {
+	text-align: center;
 }
 
 h4{

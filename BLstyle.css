@@ -38,8 +38,7 @@ body{
 	width:25%;
 }
 .col-4{
-	width:33.33%;
-	padding: 2%;
+	width:33%;
 }
 .col-5{
 	width:41.66%;
@@ -77,6 +76,14 @@ div.main {
 	padding: 10px;
 	background-color: #3366ff;
 	display: flex;
+}
+
+button {
+	background-color: #3366ff;
+	margin: 3%;
+	width: 27%;
+	height: 50px;
+	font-size: 16pt;
 }
 
 h4{

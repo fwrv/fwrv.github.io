@@ -1,5 +1,13 @@
-var main = function() {
-	//What happens when the various buttons are pressed.
-};
+var myApp = angular.module('myApp',[]);
 
-$document.ready(main);
+myApp.controller('GreetingController', ['$scope', function($scope) {
+  $scope.greeting = 'Hola!';
+  myFunction();
+}
+
+function myFunction() {
+  	alert("Hello, guest!");
+  }
+
+]);
+

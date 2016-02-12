@@ -16,6 +16,7 @@ body{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	color: #f2f2f2;
 }
 
 @media only screen and (max-width: 500px) {
@@ -78,6 +79,10 @@ div.main {
 	display: flex;
 }
 
+a {
+	color: #f2f2f2;
+}
+
 button {
 	background-color: #3366ff;
 	margin: 3%;
@@ -94,7 +99,14 @@ h4{
 }
 
 * {
-	color: #f2f2f2;
 	font-family: arial;
 }
 
+.quotebox {
+	background-color: #f2f2f2;
+	color: black;
+	margin: 20px;
+	padding: 10px;
+	width: 50%;
+	line-height: 1.5;
+}

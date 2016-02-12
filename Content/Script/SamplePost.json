@@ -1,0 +1,13 @@
+{
+	"Title": "Sample Post",
+	"Type": "object",
+	"Slug": "/sample_post",
+	"Tags": {["post", "making", "reading", "eating"]},
+	"Description": "Description of Sample Post",
+	"Content": {
+		<html ng-app="samplePost">
+		<h3>Sample Post name</h3>
+		<p>Here's some sample content.</p>
+	},
+	"required": ["firstName", "lastName"]
+}

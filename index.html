@@ -13,7 +13,7 @@
 	</div>
 	<div class="main" class="row">	
 		<div class="textbox">
-			<p>Over the course of Winter 2015 / 2016, I'm going to be using this site as a place to put my rudimentary html, css and js to the test. Hopefully, it also proves a worthwhile reason for me to go out and learn more.</p>
+			<p>Over the course of Winter 2015 / 2016, I'm going to use this site as a place to put my rudimentary html, css and js to the test. Hopefully, it also proves a worthwhile reason for me to go out and learn more.</p>
 			<p>It's very easy now to take a course on <a href="https://www.codecademy.com/">codeacademy</a> or <a href="https://www.udacity.com/">udacity</a>. While this may be an effective way for others to learn how applications and code work (they are certainly great resources), I have found that these courses, taken alone, do a bit too much "hand-holding" to be useful to me. I certainly need some hand-holding, but I don't think I'll be able to truly understand how programming works until I've made something myself.</p>
 			<h4>What is this site for?</h4>
 			<p>I'll be using this site as a place to share several things:</p>
@@ -25,8 +25,8 @@
 		</div>
 	</div>
 	<div class="topmenu" class="row">
-		<button id="dev">
-			<h2><a href="/making.html">What I'm making</a></h2>
+		<button onclick="alert('Hi! You've clicked a button. We'll put something good here soon.');" id="dev">
+			<h2>What I'm making</a></h2>
 		</button>
 		<button id="reading">
 			<h2>What I'm reading</h2>
@@ -50,7 +50,7 @@
 			<h4>Learning CSS</h4>
 			<p>This is clearly an ongoing process that very clever people have turned into an art. Here I actually did take the first 2/3 of a quick <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304">Intro to HTML and CSS</a> course on Udacity. This taught me some fundamentals around box / grid structure of websites and some cool tricks around optimising across platforms, etc. CSS is clearly a bit of a rabbit hole though and I want to start playing around in javascript.</p>
 			<h4>AngularJS</h4>
-			<p>Following the hearty recommendations of several friends, I'm learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javescript seemlessly into html applications. As of me adding this text, biglake.club now incoporates Angular... it just isn't using it much yet.</p>
+			<p>Following the hearty recommendations of several friends, I'm learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javascript seemlessly into html applications. As of me adding this text, biglake.club now incoporates Angular... it just isn't using it much yet.</p>
 			<h4>Linking within the biglake.club domain</h4>
 			<p>Ultimately I want this site (/"app") to be able to show more than one screen (i.e. I want people to be able to click around in it and be taken to different content). After consulting my lead consultant Lucas, I learned this is actually pretty straightforward. By adding a new .html file to the github repositiory and putting a simple "a href" link in the text, I can add essentially different versions of the same page that the visitor can visit / "surf to". You'll see the link on "What I'm making" header above does just that, as does <a href="/making.html">THIS</a> text. (Right now the link doesn't take you anywhere very impressive, but I want to build out the core index.html as well as possible before copying so that future changes won't require me duplicating too much work.)</p>
 			<h2>What I'm reading</h2>
@@ -61,12 +61,25 @@
 			<h4>"The Modern Value Chain"</h4>
 			<img src="https://d2dpa77enk4uif.cloudfront.net/app/uploads/20160116211913/REDEF_Curation_1.5.png" alt="Value Chain after" style="width:75%">
 			<p>Interesting meta-point: This article was recommended to me in a regular newsletter (Azeem Azhar's <em>very good</em> <a href="https://www.getrevue.co/profile/azeem?utm_campaign=Issue&utm_content=profileimage&utm_medium=email&utm_source=issue">"The Exponential View"</a>), having been selected from a wide range of content that was recommended to <em>him</em> by his readers (and perhaps a small amount of personal reading). I'd never heard of <a href="http://redef.com/channel/media">REDEF</a>, the traditional "distributor" before, nor will I necessarily look directly to that distributor again. Is the <em>real</em> distributor here Azeem, the reader that recommended the piece to him, or <em>me</em>, the person who has shared the content now with <em>you</em>, the audience (i.e. the friend or family member humoring me by checking out this site)? No one involved has had any relationship with the "creatives" of the content (which, at least in my case, is a shame, since they seem like clever guys). While this phenomenon is potentially exciting for them, it also highlights their lack of control. In any case, plenty more to dig into here.</p>
+			<p><strong>12 Feb 2016:</strong> <a href="https://www.technologyreview.com/s/542951/business-models-information-technology-and-the-company-of-the-future/">"Business Models, Information Technology, and the Company of the Future"</a> by Stanford's Haim Mendelson showed up this morning in the daily newsletter from the MIT tech review (originally published in Oct 2015). The heady title gives a sense of what to expect from the piece, which is long on MBA-lingo and short on real-world examples / applications. (Seriously though, this is an actual quote: "The combined effect of mobile technologies, wearable devices and sensors, cloud computing, and big data technologies will sharpen the structure of future business models." Say what? <em>No way!</em>) That being said (and as pejorative as I made "MBA-lingo" sound just now), I found the following interesting:</p>
+			<div class="quotebox">
+				<p>Three technologies will play a particularly important role in the use of IT:</p>
+				<ul>
+					<li><em>Customer-intimacy agents</em> will be customers digital representatives in the marketplace, using data to find and solicit solutions that will make them better off.</li>
+					<li><em>Value-chain coordinators</em> will match supply and demand, assemble customized solutions, and engage in electronic customer data-driven innovation.</li>
+					<li><em>Producers</em> will increasingly engage in marketplace selling and data-driven innovation.</li>
+				</ul>
+			</div>
+			<p>These three technologies seem to fit along a continuum of being customer facing vs. enterprise facing. "Customer-intimacy agents" purport to be actively champion-ing (even anticipating) the needs/desires of the customer/user. An example of this could be (my employer) <a href="www.knewton.com">Knewton</a>'s adaptive learning technology, which uses student proficiency data to cater content to the individual learner's needs and goals (and showing teachers predictive analytics re: student performance).</p>
+			<p>"Value-chain coordinators" straddle the best interests of the customer and the enterprise, connecting the one with the best possible services of the other. An obvious example of this would be how Uber uses surge pricing to match ride supply with ride demand. Surge pricing itself is unsustainably punitive and really a manifestation of equilibrium breaking down rather than a triumph of efficiency - I think it's more of a stop-gap. The victory for "value-chain coordinating" technology will be when Uber can anticipate ride demand so well so that surge pricing wont even take place. Maybe you could debate that Uber would never want its own technology to make surge pricing obsolete but I think users will ultimately be powerful enough that it (Uber) won't have a choice (the power of Uber's users is also why European regulators and cab drivers are fighting a losing battle). This anticipatory tech would be far easier to implement when cars go driver-less. (For another example: <a href="http://www.forbes.com/sites/onmarketing/2014/01/28/why-amazons-anticipatory-shipping-is-pure-genius/#4cf4f2b92fac">see</a> how Amazon is stocking it's "fulfillment centers" similarly to anticipate consumer demand.</p>
+			<p>Mendelson's last category is also probably the most boring as it's already the most prevalant. Producers are selling into an increasingly flat market (see the post on ubiquitous/accessible content above) where intimate knowledge of their end users (and use cases) is imperative both for differentiation and innovation.</p>
+			<p>For all the drivel (Mendelson's and mine), I think there is actually good food for thought here. I also realise that I'm offering my opinion to you (my accommodating friend or family member) without giving you a chance to respond. There are many improvements to be made to this site (from typos/grammar to its "1990's feel" to its fundamental structure) - hopefully some feedback functionality will be available soon. In the meantime, you can always tweet at me @frodriguezvilla.</p>
 			<h2>What I'm eating</h2>
 			<p>[Very much work in progress, some content below.]</p>
 			<p>If I'm in London, chances are I'm eating <a href="http://meatmission.com/">here</a>, <a href="http://www.dishoom.com/">here</a>, or <a href="http://www.homeslicepizza.co.uk/menu/">here</a>.</p>
 			<p>If I were asked to rank my favorite <a href="http://www.homeslicepizza.co.uk/">Homeslice</a> pizzas, I'd probably say:</p>
 			<ol>
-				<li>Chorizo, Corn & "Coriander" (a.k.a. Oregano)</li>
+				<li>Chorizo, Corn & "Coriander" (a.k.a. Cilantro)</li>
 				<li>Salami, Rocket & Parmesan</li>
 				<li>Goat Shoulder</li>
 				<li>Aubergine, Cauliflower, Spinach & Harissa</li>

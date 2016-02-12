@@ -3,7 +3,6 @@
 <head>
 	<title>Big Lake Club</title>	
 	<link rel="stylesheet" type="text/css" href="BLstyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>	
 	<script type="text/javascript" src="Content/Script/BLscript.js"></script>
 </head>
 <body>
@@ -25,20 +24,20 @@
 		</div>
 	</div>
 	<div class="topmenu" class="row">
-		<button onclick="alert('Hi! You've clicked a button. We'll put something good here soon.');">
-			<h2>What I'm making</a></h2>
+		<button>
+			<h2><a href="#making">What I'm making</a></h2>
 		</button>
 		<button>
-			<h2>What I'm reading</h2>
+			<h2><a href="#reading">What I'm reading</a></h2>
 		</button>
 		<button id="food">
-			<h2>What I'm eating</h2>
+			<h2><a href="#eating">What I'm eating</a></h2>
 		</button>
 	</div>
 	<div class="main" class="row">
 		<div class="textbox">
-			<div id="making">
-				<h2><a href="/making.html">What I'm making</a></h2>
+			<div id="making" name="making">
+				<h2>What I'm making</h2>
 				<h4>Domain name</h4>
 				<p>First step was to find a domain name. Growing up, my family used to rent a cabin in Chocorua, New Hampshire for a couple of weeks every summer. Mt. Chocorua is an incredibly photogenic peak in the White Mountains of northern New England. At the foot of the mountain is Lake Chocorua. A small wood bridge, wide enough for one car and maybe 15 feet in length, divides the lake in two: a "big lake" and a small one. You can probably see where this is going... our family referred to the two as the "big lake" and "small lake." It may be harder to see why all this made me think biglake was a cool domain name, but I think it'll certainly do.</p>
 				<p>I haven't quite figured out the ".club" part yet... It was my favorite of the ones available on godaddy.com. If you're reading this, you're in the club.</p>
@@ -50,15 +49,34 @@
 				<p>This took a fair amount of tinkering and cursing. I didn't quite understand how to link to other files saved locally but in different folders. </p>
 				<h4>Learning CSS</h4>
 				<p>This is clearly an ongoing process that very clever people have turned into an art. Here I actually did take the first 2/3 of a quick <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304">Intro to HTML and CSS</a> course on Udacity. This taught me some fundamentals around box / grid structure of websites and some cool tricks around optimising across platforms, etc. CSS is clearly a bit of a rabbit hole though and I want to start playing around in javascript.</p>
+				<h4>Alerts / buttons</h4>
+				<p><strong>10 Feb 2016:</strong> So far, I've done next to nothing with javascript on this site itself. To experience for yourself the extent of what <em>has</em> been incorporated, press this button:  <button id="myBtn">Click me</button></p>
 				<h4>AngularJS</h4>
-				<p>Following the hearty recommendations of several friends, I'm learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javascript seemlessly into html applications. As of me adding this text, biglake.club now incoporates Angular... it just isn't using it much yet.</p>
+				<p>Following the hearty recommendations of several friends, I started learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javascript seemlessly into html applications. I had this incorporated into the main js script linked to app but I've taken it out while I spend more time experimenting in standard js.</p>
 				<h4>Linking within the biglake.club domain</h4>
-				<p>Ultimately I want this site (/"app") to be able to show more than one screen (i.e. I want people to be able to click around in it and be taken to different content). After consulting my lead consultant Lucas, I learned this is actually pretty straightforward. By adding a new .html file to the github repositiory and putting a simple "a href" link in the text, I can add essentially different versions of the same page that the visitor can visit / "surf to". You'll see the link on "What I'm making" header above does just that, as does <a href="/making.html">THIS</a> text. (Right now the link doesn't take you anywhere very impressive, but I want to build out the core index.html as well as possible before copying so that future changes won't require me duplicating too much work.)</p>
+				<p>Ultimately I want this site (/"app") to be able to show more than one screen (i.e. I want people to be able to click around in it and be taken to different content). After consulting my lead consultant Lucas, I learned this is actually pretty straightforward. By adding a new .html file to the github repositiory and putting a simple "a href" link in the text, I can add essentially different versions of the same page that the visitor can visit / "surf to". Right now that link wouldn't take you anywhere very impressive. I want to build out the core index.html as well as possible before copying so that future changes won't require me duplicating too much work.</p>
+				<h4>Jumping around this main page</h4>
+				<p>(12 Feb 2016) What I <em>have</em> built in is the functionality for you, the visitor, to hop around the homepage freely. This is actually the same as above, the "a href" links to a "name" I've put on one of the three main content divs (with a "#" in front, how trendy hehe). The three buttons above are linked to the three corresponding headings for the pages content.</p>
+				<h4>Converting this site's content into JS objects and eventually JSON files</h4>
+				<p>(Talking the talk on 12 Jan 2016, walking the walk soon) The "great leap forward" for this site will be when content can be displayed / modified in a modular and scalable way. Right now, the site you are looking at is one long html file. (If you're using a chrome browser, you can right-click/control-click on the screen, hit "Inspect", and see the code for yourself.) Each update that I make, I type into the same file. This is increasingly untenable as the number of updates grows - most importantly, it's <em>inelegant!</em></p>
+				<p>As a key part of my javascript education, I've been learing about <a href="http://javascriptissexy.com/javascript-objects-in-detail/">objects</a>. Within the context of js, an object is a "complex" data type, as opposed to numbers or strings of text, which are "simple" data types. Objects are useful in that they can take on multiple properties. For example, a smartphone-contact object could contain the properties of a person's name, their number and their email address. Curating an array (or list) of objects all with similar (or overlapping) properties allows you to list or search within quite easily (using "for" loops, among other nifty tricks).</p>
+				<p>The next step, then, for this site/project is to convert the content posts into objects, each with a set of properties. The common properties as I've laid them out include:</p>
+				<ul>
+					<li>Title</li>
+					<li>Date posted</li>
+					<li>Tag (i.e. whether it counts as "making", "reading", or "eating")</li>
+					<li>Summary (a one sentence description which can be displayed in an index or TOC)</li>
+					<li>Author (for a future scenario in which the BLC may contain kind outside contributors)</li>
+					<li>Content (i.e. the post itself)</li>
+				</ul>
+				<p>When the content lives in the form of js objects, it will free the index.html page (and other html sub-pages, as I make them) from housing all the content in the same doc. You, the viewer, will be able to search content by tag, date or author or even browse by summary. The entire content process will become more modular and I'll be able to abstract fundamental app changes without getting ensnared by a long thorny html file. It is the future and it is exciting.</p>
+				<p>However, this can be improved upon still further! You may notice a shortcoming of the plan so far: By turning content posts into js objects in a single array I may be taking them out of the html file, but I'm only just moving them all into a js one. This is where <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> comes in. JSON, or "JavaScript Object Notation" is a format and file type that will allow me to create content posts as independant files with the same data parameters that I would feed into the objects in my standard js file. I haven't fully gotten my head around this yet - but the idea is that each of the content posts would live as their own files in my github repository and my main BLscript.js file would reference them as it did all the wonderful things outlined above.</p>
+				<p>These changes will bring about a brave new world for the members of the Big Lake Club. I'll be providing unsolicited updates as I go along.</p>
 			</div>
-			<div id="reading">
+			<div id="reading" name="reading">
 				<h2>What I'm reading</h2>
-				<p>[Basically TBD - but you can see my Goodreads acccount <a href="https://www.goodreads.com/user/show/41286311-fernando-rodriguez-villa">here</a>.]</p>
-				<p><strong>02 Feb 2016:</strong> <a href="http://redef.com/original/age-of-abundance-how-the-content-explosion-will-invert-the-media-industry">This piece</a> by Tal Shachar and Liam Boluk goes on a thoughtful exploration of the implications of both a) "ubiquitious content" and b) its new methods of distribution for the media industry. It's worth reading in its entirety but at the very least you should check out these two images:</p>
+				<p>[Work in progress - you can see my Goodreads acccount <a href="https://www.goodreads.com/user/show/41286311-fernando-rodriguez-villa">here</a>.]</p>
+				<p><strong>02 Feb 2016:</strong> <a href="http://redef.com/original/age-of-abundance-how-the-content-explosion-will-invert-the-media-industry">"Age of Abundance"</a> by Tal Shachar and Liam Boluk goes on a thoughtful exploration of the implications of both a) "ubiquitious content" and b) its new methods of distribution for the media industry. It's worth reading in its entirety but at the very least you should check out these two images:</p>
 				<h4>"The Historical Value Chain"</h4>
 				<img src="https://d2dpa77enk4uif.cloudfront.net/app/uploads/20160116211911/REDEF_Curation_1.1.png" alt="Value Chain before" style="width:75%">
 				<h4>"The Modern Value Chain"</h4>
@@ -78,7 +96,7 @@
 				<p>Mendelson's last category is also probably the most boring as it's already the most prevalant. Producers are selling into an increasingly flat market (see the post on ubiquitous/accessible content above) where intimate knowledge of their end users (and use cases) is imperative both for differentiation and innovation.</p>
 				<p>For all the drivel (Mendelson's and mine), I think there is actually good food for thought here. I also realise that I'm offering my opinion to you (my accommodating friend or family member) without giving you a chance to respond. There are many improvements to be made to this site (from typos/grammar to its "1990's feel" to its fundamental structure) - hopefully some feedback functionality will be available soon. In the meantime, you can always tweet at me @frodriguezvilla.</p>
 			</div>
-			<div id="eating">
+			<div id="eating" name="eating">
 				<h2>What I'm eating</h2>
 				<p>[Very much work in progress, some content below.]</p>
 				<p>If I'm in London, chances are I'm eating <a href="http://meatmission.com/">here</a>, <a href="http://www.dishoom.com/">here</a>, or <a href="http://www.homeslicepizza.co.uk/menu/">here</a>.</p>

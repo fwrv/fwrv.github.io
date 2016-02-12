@@ -86,9 +86,23 @@ a {
 button {
 	background-color: #3366ff;
 	margin: 3%;
+	font-size: 18px;
 	width: 27%;
-	font-size: 16pt;
 	color: #f2f2f2;
+}
+
+#myBtn {
+	margin: 0px;
+	display: inline;
+	width:10%;
+	background-color: gray;
+	:hover {
+		background-color: #002b80;
+	}
+}
+
+button:hover {
+	background-color: #002b80;
 }
 
 h2 {
@@ -102,6 +116,18 @@ h4{
 * {
 	font-family: arial;
 	line-height: 1.25;
+}
+
+#making {
+	padding-top:25px;
+}
+
+#reading {
+	padding-top:25px;
+}
+
+#eating {
+	padding-top:25px;
 }
 
 .quotebox {

@@ -72,7 +72,16 @@
 				<p>When the content lives in the form of js objects, it will free the index.html page (and other html sub-pages, as I make them) from housing all the content in the same doc. You, the viewer, will be able to search and sort content by tag, date or author or even browse by summary. The entire content process will become more modular and I'll be able to abstract fundamental app changes without getting ensnared by a long thorny html file. It is the future and it is exciting.</p>
 				<p>However, this can be improved upon still further! You may notice a shortcoming of the plan so far: By turning content posts into js objects in a single array I may be taking them out of the html file, but I'm only just moving them all into a js one. This is where <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> comes in. JSON, or "JavaScript Object Notation" is a format and file type that will allow me to create content posts as independant files with the same data parameters that I would feed into the objects in my standard js file. I haven't fully gotten my head around this yet - but the idea is that each of the content posts would live as its own file in my github repository and my main BLscript.js file would reference them as described above.</p>
 				<p>These changes will bring about a brave new world for the members of the Big Lake Club. I'll be providing unsolicited updates as I go along.</p>
+				<h4>Embedding YouTube videos (through the iframe tag)</h4>
+				<p>(17 Feb 2016) One of the goals of this project is to program something that can talk to other software through APIs. Since giving myself the opportunity to embed video content will allow me to be more creative/versatile with whatever I continue to make, YouTube was a natural choice to start with. I'm also working on the assumption that Google's user-friendly treatment of the developer community would make this a relatively straightforward exercise for a novice.</p>
+				<p>The <a href="https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player">Google Developers site</a> provides a thorough walk-through of the YouTube Player API in the case of "iframe" embeds. An "iframe" html tag is like any other (e.g. "div", "p", "script") but holds its own content type. The developer page provides all sorts of js tools you can use to modify the way the video plays (e.g. put it on a loop, stop after x seconds, etc.) as well as a way to call the YouTube API asynchronously. At least for now, I'm going to skip a lot of these bells and whistles and put the code directly into the html.</p>
+				<p>Without further ado, please enjoy this awesome clip from <a href="http://www.imdb.com/title/tt1408101/">Star Trek: Into Darkness</a> (2013) of Kirk (Chris Pine) and Khan (Benedict Cumberbatch) jumping through space from the <em>Enterprise</em> to the <em>Vengance</em>:</p>
+				<iframe id="player" type="text/html" src="https://www.youtube.com/embed/YIkbnFVW7xM" frameborder="25" allowfullscreen></iframe>
+				<p>I'm working on a way to have the aspect ratio automatically adjust. Until then the element isn't fully responsive. The nice thing is that the iframe tag can take on an id or class like any other so it can be formatted fairly easily in my css file. The iframe tag can be tweaked directly to do things like allow full screen. I'll want to revisit this subject to play with the bells and whistles mentioned above - but in the meantime, heed these words from a very bilingual Keanu:</p>
+				<iframe id="player" type="text/html" src="https://www.youtube.com/embed/BWg-Dz6JtJU" frameborder="25" allowfullscreen></iframe>
 			</div>
+		</div>
+		<div class="textbox">
 			<div id="reading" name="reading">
 				<h2>What I'm reading</h2>
 				<p>[Work in progress - you can see my Goodreads acccount <a href="https://www.goodreads.com/user/show/41286311-fernando-rodriguez-villa">here</a>.]</p>
@@ -96,6 +105,8 @@
 				<p>Mendelson's last category is also probably the most boring as it's already the most prevalant. Producers are selling into an increasingly flat market (see the post on ubiquitous/accessible content above) where intimate knowledge of their end users (and use cases) is imperative both for differentiation and innovation.</p>
 				<p>For all the drivel (Mendelson's and mine), I think there is actually good food for thought here. I also realise that I'm offering my opinion to you (my accommodating friend or family member) without giving you a chance to respond. There are many improvements to be made to this site (from typos/grammar to its "1990's feel" to its fundamental structure) - hopefully some feedback functionality will be available soon. In the meantime, you can always tweet at me @frodriguezvilla.</p>
 			</div>
+		</div>
+		<div class="textbox">
 			<div id="eating" name="eating">
 				<h2>What I'm eating</h2>
 				<p>[Very much work in progress, some content below.]</p>

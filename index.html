@@ -38,47 +38,75 @@
 		<div class="textbox">
 			<div id="making" name="making">
 				<h2>What I'm making</h2>
-				<h4>Domain name</h4>
-				<p>(15 Dec 2015) First step was to find a domain name. Growing up, my family used to rent a cabin in Chocorua, New Hampshire for a couple of weeks every summer. Mt. Chocorua is an incredibly photogenic peak in the White Mountains of northern New England. At the foot of the mountain is Lake Chocorua. A small wood bridge, wide enough for one car and maybe 15 feet in length, divides the lake in two: a "big lake" and a small one. The small lake offered a more intimate swimming environment while the big one offered opportunies for kayaking adventures and the promise of "white caps" on particularly windy days. For whatever reason, these memories along with the name's brevity made it seem an appropriate choice.</p>
-				<p>You can reserve domain names at any number of sites, the most popular of which is probably <a href="www.godaddy.com">GoDaddy.com</a> (known to most for provocative super bowl ads / Danica Patrick). For whatever domain you choose, the offer the .endings available (which come with different price tags). .com or .org were not available, which was fine as non-standard endings are <a href="www.improbable.io">all the rage now</a> anyways. I haven't quite figured out why specifically the ".club" part yet - if you're reading this, you're in the club.</p>
-				<h4>Hosting</h4>
-				<p>(16 Dec 2015) Github will host pages themselves, which is relatively easy and free. There was a big of head-scratching in linking it to the custom domain name (otherwise you'd have to access this site through fwrv.github.io). Big thanks to Lucas for helping me sort it out. I imagine it isn't the last time I go to him for advice on this adventure.</p>
-				<h4>Code editing</h4>
-				<p>(18 Dec 2015) I'm using Sublime Text. It's a pleasure to work with and was very straightforward to download. I was a bit surprised when it asked for a $70 registration fee. Over time, I hope to figure out what the various text colors mean.</p>
-				<h4>Linking in the CSS</h4>
-				<p>(20 Dec 2015) CSS (Cascading Style Sheets) is the code that tells the site how it should look. By controlling style decisions from a separate code file (in a different language), decisions I make from font color to general layout are implemented throughout the html doc. Of course, this requires me including a link in the html doc that references the css. This took a fair amount of tinkering and cursing. It took a while for me to understand how to link across files saved locally but in different folders.</p>
-				<h4>Learning CSS</h4>
-				<p>(23 Dec 2015) This is clearly an ongoing process that very clever people have turned into an art. Here I actually did take the first 2/3 of a quick <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304">Intro to HTML and CSS</a> course on Udacity. This taught me some fundamentals around box / grid structure of websites and some cool tricks around optimising across platforms, etc. CSS is clearly a bit of a rabbit hole though and I want to start playing around in javascript.</p>
-				<h4>Alerts / buttons</h4>
-				<p>(10 Feb 2016) So far, I've done next to nothing with javascript on this site itself. To experience for yourself the extent of what <em>has</em> been incorporated, press this button:  <button id="myBtn">Click me</button></p>
-				<h4>AngularJS</h4>
-				<p>(16 Jan 2016) Following the hearty recommendations of several friends, I started learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javascript seemlessly into html applications. I had this incorporated into the main js script linked to app but I've taken it out while I spend more time experimenting in standard js.</p>
-				<h4>Linking within the biglake.club domain</h4>
-				<p>(16 Jan 2016) Ultimately I want this site (/"app") to be able to show more than one screen (i.e. I want people to be able to click around in it and be taken to different content). After consulting my lead consultant Lucas, I learned this is actually pretty straightforward. By adding a new .html file to the github repositiory and putting a simple "a href" link in the text, I can add essentially different versions of the same page that the visitor can visit / "surf to". Right now that link wouldn't take you anywhere very impressive. I want to build out the core index.html as well as possible before copying so that future changes won't require me duplicating too much work.</p>
-				<h4>Jumping around this main page</h4>
-				<p>(12 Feb 2016) What I <em>have</em> built in is the functionality for you, the visitor, to hop around the homepage freely. This is actually the same as above, the "a href" links to a "name" I've put on one of the three main content divs (with a "#" in front, how trendy hehe). The three buttons above are linked to the three corresponding headings for the pages content.</p>
-				<h4>Converting this site's content into JS objects and eventually JSON files</h4>
-				<p>(Talking the talk on 12 Feb 2016, walking the walk soon) The "great leap forward" for this site will be when content can be displayed / modified in a modular and scalable way. Right now, the site you are looking at is one long html file. (If you're using a chrome browser, you can right-click/control-click on the screen, hit "Inspect", and see the code for yourself.) Each update that I make, I type into the same file. This is increasingly untenable as the number of updates grows - most importantly, it's <em>inelegant!</em></p>
-				<p>As a key part of my javascript education, I've been learing about <a href="http://javascriptissexy.com/javascript-objects-in-detail/">objects</a>. Within the context of js, an object is a "complex" data type, as opposed to numbers or strings of text, which are "simple" data types. Objects are useful in that they can take on multiple properties. For example, a smartphone-contact object could contain the properties of a person's name, their number and their email address. Curating an array (or list) of objects all with similar (or overlapping) properties allows you to list or search within quite easily (using "for" loops, among other nifty tricks).</p>
-				<p>The next step, then, for this site/project is to convert the content posts into objects, each with a set of properties. The common properties as I've laid them out include:</p>
-				<ul>
-					<li>Title</li>
-					<li>Date posted</li>
-					<li>Tag (i.e. whether it counts as "making", "reading", or "eating")</li>
-					<li>Summary (a one sentence description which can be displayed in an index or TOC)</li>
-					<li>Author (for a future scenario in which the BLC may contain kind outside contributors)</li>
-					<li>Content (i.e. the post itself)</li>
-				</ul>
-				<p>When the content lives in the form of js objects, it will free the index.html page (and other html sub-pages, as I make them) from housing all the content in the same doc. You, the viewer, will be able to search and sort content by tag, date or author or even browse by summary. The entire content process will become more modular and I'll be able to abstract fundamental app changes without getting ensnared by a long thorny html file. It is the future and it is exciting.</p>
-				<p>However, this can be improved upon still further! You may notice a shortcoming of the plan so far: By turning content posts into js objects in a single array I may be taking them out of the html file, but I'm only just moving them all into a js one. This is where <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> comes in. JSON, or "JavaScript Object Notation" is a format and file type that will allow me to create content posts as independant files with the same data parameters that I would feed into the objects in my standard js file. I haven't fully gotten my head around this yet - but the idea is that each of the content posts would live as its own file in my github repository and my main BLscript.js file would reference them as described above.</p>
-				<p>These changes will bring about a brave new world for the members of the Big Lake Club. I'll be providing unsolicited updates as I go along.</p>
-				<h4>Embedding YouTube videos (through the iframe tag)</h4>
-				<p>(17 Feb 2016) One of the goals of this project is to program something that can talk to other software through APIs. Since giving myself the opportunity to embed video content will allow me to be more creative/versatile with whatever I continue to make, YouTube was a natural choice to start with. I'm also working on the assumption that Google's user-friendly treatment of the developer community would make this a relatively straightforward exercise for a novice.</p>
-				<p>The <a href="https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player">Google Developers site</a> provides a thorough walk-through of the YouTube Player API in the case of "iframe" embeds. An "iframe" html tag is like any other (e.g. "div", "p", "script") but holds its own content type. The developer page provides all sorts of js tools you can use to modify the way the video plays (e.g. put it on a loop, stop after x seconds, etc.) as well as a way to call the YouTube API asynchronously. At least for now, I'm going to skip a lot of these bells and whistles and put the code directly into the html.</p>
-				<p>Without further ado, please enjoy this awesome clip from <a href="http://www.imdb.com/title/tt1408101/">Star Trek: Into Darkness</a> (2013) of Kirk (Chris Pine) and Khan (Benedict Cumberbatch) jumping through space from the <em>Enterprise</em> to the <em>Vengance</em>:</p>
-				<iframe id="player" type="text/html" src="https://www.youtube.com/embed/YIkbnFVW7xM" frameborder="25" allowfullscreen></iframe>
-				<p>I'm working on a way to have the aspect ratio automatically adjust. Until then the element isn't fully responsive. The nice thing is that the iframe tag can take on an id or class like any other so it can be formatted fairly easily in my css file. The iframe tag can be tweaked directly to do things like allow full screen. I'll want to revisit this subject to play with the bells and whistles mentioned above - but in the meantime, heed these words from a very bilingual Keanu:</p>
-				<iframe id="player" type="text/html" src="https://www.youtube.com/embed/BWg-Dz6JtJU" frameborder="25" allowfullscreen></iframe>
+				<div>
+					<h4>Domain name</h4>
+					<p>(15 Dec 2015) First step was to find a domain name. Growing up, my family used to rent a cabin in Chocorua, New Hampshire for a couple of weeks every summer. Mt. Chocorua is an incredibly photogenic peak in the White Mountains of northern New England. At the foot of the mountain is Lake Chocorua. A small wood bridge, wide enough for one car and maybe 15 feet in length, divides the lake in two: a "big lake" and a little one. The little lake offered a more intimate swimming environment while the big one was best for kayaking adventures and the promise of "white caps" on particularly windy days. For whatever reason, these memories along with the name's brevity made it seem an appropriate choice.</p>
+					<p>You can reserve domain names at any number of sites, the most popular of which is probably <a href="www.godaddy.com">GoDaddy.com</a> (known to most for provocative super bowl ads / Danica Patrick). For whatever domain you choose, the offer the .endings available (which come with different price tags). .com or .org were not available, which was fine as non-standard endings are <a href="www.improbable.io">all the rage now</a> anyways. I haven't quite figured out why specifically the ".club" part yet - if you're reading this, you're in the club.</p>
+				</div>
+				<div>
+					<h4>Hosting</h4>
+					<p>(16 Dec 2015) Github will host pages themselves, which is relatively easy and free. There was a big of head-scratching in linking it to the custom domain name (otherwise you'd have to access this site through fwrv.github.io). Big thanks to Lucas for helping me sort it out. I imagine it isn't the last time I go to him for advice on this adventure.</p>
+				</div>
+				<div>
+					<h4>Code editing</h4>
+					<p>(18 Dec 2015) I'm using Sublime Text. It's a pleasure to work with and was very straightforward to download. I was a bit surprised when it asked for a $70 registration fee. Over time, I hope to figure out what the various text colors mean.</p>
+				</div>
+				<div>
+					<h4>Linking in the CSS</h4>
+					<p>(20 Dec 2015) CSS (Cascading Style Sheets) is the code that tells the site how it should look. By controlling style decisions from a separate code file (in a different language), decisions I make from font color to general layout are implemented throughout the html doc. Of course, this requires me including a link in the html doc that references the css. This took a fair amount of tinkering and cursing. It took a while for me to understand how to link across files saved locally but in different folders.</p>
+				</div>
+				<div>
+					<h4>Learning CSS</h4>
+					<p>(23 Dec 2015) This is clearly an ongoing process that very clever people have turned into an art. Here I actually did take the first 2/3 of a quick <a href="https://www.udacity.com/course/intro-to-html-and-css--ud304">Intro to HTML and CSS</a> course on Udacity. This taught me some fundamentals around box / grid structure of websites and some cool tricks around optimising across platforms, etc. CSS is clearly a bit of a rabbit hole though and I want to start playing around in javascript.</p>
+				</div>
+				<div>
+					<h4>Alerts / buttons</h4>
+					<p>(10 Feb 2016) So far, I've done next to nothing with javascript on this site itself. To experience for yourself the extent of what <em>has</em> been incorporated, press this button:  <button id="myBtn">Click me</button></p>
+				</div>
+				<div>
+					<h4>AngularJS</h4>
+					<p>(16 Jan 2016) Following the hearty recommendations of several friends, I started learning <a href="https://angularjs.org/">Angular JS</a> as a way to incorporate some javescript into this app (aka this page - reader's note: I have learned to call this website an "app" or a "web app". Apparently all websites are indeeds applications.) Angular JS is a much-heralded project from google that allows developers to incorporate javascript seemlessly into html applications. I had this incorporated into the main js script linked to app but I've taken it out while I spend more time experimenting in standard js.</p>
+				</div>
+				<div>
+					<h4>Linking within the biglake.club domain</h4>
+					<p>(16 Jan 2016) Ultimately I want this site (/"app") to be able to show more than one screen (i.e. I want people to be able to click around in it and be taken to different content). After consulting my lead consultant Lucas, I learned this is actually pretty straightforward. By adding a new .html file to the github repositiory and putting a simple "a href" link in the text, I can add essentially different versions of the same page that the visitor can visit / "surf to". Right now that link wouldn't take you anywhere very impressive. I want to build out the core index.html as well as possible before copying so that future changes won't require me duplicating too much work.</p>
+				</div>
+				<div>
+					<h4>Jumping around this main page</h4>
+					<p>(12 Feb 2016) What I <em>have</em> built in is the functionality for you, the visitor, to hop around the homepage freely. This is actually the same as above, the "a href" links to a "name" I've put on one of the three main content divs (with a "#" in front, how trendy hehe). The three buttons above are linked to the three corresponding headings for the pages content.</p>
+				</div>
+				<div>
+					<h4>Converting this site's content into JS objects and eventually JSON files</h4>
+					<p>(Talking the talk on 12 Feb 2016, walking the walk soon) The "great leap forward" for this site will be when content can be displayed / modified in a modular and scalable way. Right now, the site you are looking at is one long html file. (If you're using a chrome browser, you can right-click/control-click on the screen, hit "Inspect", and see the code for yourself.) Each update that I make, I type into the same file. This is increasingly untenable as the number of updates grows - most importantly, it's <em>inelegant!</em></p>
+					<p>As a key part of my javascript education, I've been learing about <a href="http://javascriptissexy.com/javascript-objects-in-detail/">objects</a>. Within the context of js, an object is a "complex" data type, as opposed to numbers or strings of text, which are "simple" data types. Objects are useful in that they can take on multiple properties. For example, a smartphone-contact object could contain the properties of a person's name, their number and their email address. Curating an array (or list) of objects all with similar (or overlapping) properties allows you to list or search within quite easily (using "for" loops, among other nifty tricks).</p>
+					<p>The next step, then, for this site/project is to convert the content posts into objects, each with a set of properties. The common properties as I've laid them out include:</p>
+					<ul>
+						<li>Title</li>
+						<li>Date posted</li>
+						<li>Tag (i.e. whether it counts as "making", "reading", or "eating")</li>
+						<li>Summary (a one sentence description which can be displayed in an index or TOC)</li>
+						<li>Author (for a future scenario in which the BLC may contain kind outside contributors)</li>
+						<li>Content (i.e. the post itself)</li>
+					</ul>
+					<p>When the content lives in the form of js objects, it will free the index.html page (and other html sub-pages, as I make them) from housing all the content in the same doc. You, the viewer, will be able to search and sort content by tag, date or author or even browse by summary. The entire content process will become more modular and I'll be able to abstract fundamental app changes without getting ensnared by a long thorny html file. It is the future and it is exciting.</p>
+					<p>However, this can be improved upon still further! You may notice a shortcoming of the plan so far: By turning content posts into js objects in a single array I may be taking them out of the html file, but I'm only just moving them all into a js one. This is where <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> comes in. JSON, or "JavaScript Object Notation" is a format and file type that will allow me to create content posts as independant files with the same data parameters that I would feed into the objects in my standard js file. I haven't fully gotten my head around this yet - but the idea is that each of the content posts would live as its own file in my github repository and my main BLscript.js file would reference them as described above.</p>
+					<p>These changes will bring about a brave new world for the members of the Big Lake Club. I'll be providing unsolicited updates as I go along.</p>
+				</div>
+				<div>
+					<h4>Embedding YouTube videos (through the iframe tag)</h4>
+					<p>(17 Feb 2016) One of the goals of this project is to program something that can talk to other software through APIs. Since giving myself the opportunity to embed video content will allow me to be more creative/versatile with whatever I continue to make, YouTube was a natural choice to start with. I'm also working on the assumption that Google's user-friendly treatment of the developer community would make this a relatively straightforward exercise for a novice.</p>
+					<p>The <a href="https://developers.google.com/youtube/iframe_api_reference#Loading_a_Video_Player">Google Developers site</a> provides a thorough walk-through of the YouTube Player API in the case of "iframe" embeds. An "iframe" html tag is like any other (e.g. "div", "p", "script") but holds its own content type. The developer page provides all sorts of js tools you can use to modify the way the video plays (e.g. put it on a loop, stop after x seconds, etc.) as well as a way to call the YouTube API asynchronously. At least for now, I'm going to skip a lot of these bells and whistles and put the code directly into the html (Lucas has met this decision with a mix of a mix of disgunt and dismay).</p>
+					<p>Without further ado, please enjoy this awesome clip from <a href="http://www.imdb.com/title/tt1408101/">Star Trek: Into Darkness</a> (2013) of Kirk (Chris Pine) and Khan (Benedict Cumberbatch) jumping through space from the <em>Enterprise</em> to the <em>Vengance</em>:</p>
+					<iframe class="player" type="text/html" src="https://www.youtube.com/embed/YIkbnFVW7xM" frameborder="25" allowfullscreen></iframe>
+					<p>I'm working on a way to have the aspect ratio automatically adjust. Until then the element isn't fully responsive. The nice thing is that the iframe tag can take on an id or class like any other so it can be formatted fairly easily in my css file. The iframe tag can be tweaked directly to do things like allow full screen. I'll want to revisit this subject to play with the bells and whistles mentioned above - but in the meantime, heed these words from a very bilingual Keanu:</p>
+					<iframe class="player" type="text/html" src="https://www.youtube.com/embed/BWg-Dz6JtJU" frameborder="25" allowfullscreen></iframe>
+				</div>
+				<div>
+					<h4>Embedding Google Maps</h4>
+					<p>(18 Feb 2016) Since the above was surprisingly straightforward, I decided to see how much harder it would be to embed a google map. The piece of content you see below is a bit more complicated than a youtube video (you can change to satellite view, drag about the map, zoom in, zoom out, etc.) but it can also be incorporated into the code fairly simply through an iframe tag.</p>
+					<iframe class="map" frameborder="25" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJIU55GJ8Ns0wRulEeYuUppLw&key=AIzaSyDPYOlOl9fMeldfU0KdvhBP6sWxdAUPlWY&maptype=satellite" allowfullscreen></iframe>
+					<p>Some visitors may be able to identify the above as Lake Chocorua, the inspiration for this site's domain name (if you zoom in close enough, you'll see the "Little Lake" too). The helpful <a href="https://developers.google.com/maps/documentation/embed/guide?authuser=1">Google Developers site</a> walks you through how to modify the code snippet to show different things (for example, I changed the url slighty to show "satellite" rather than "roadmap" mode). As with the YouTube API, there are a lot of things I'll be able to do in js once I dig a bit deeper (for example chart my travels or the locations of visitors to this site - all two digits of them). I'll use js more for those.</p>
+				</div>
 			</div>
 		</div>
 		<div class="textbox">

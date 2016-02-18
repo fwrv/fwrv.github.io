@@ -12,7 +12,7 @@
 }
 
 body{
-	background-image: url("Content/Images/Mount_Chocorua.jpg");
+	background-image: url("Content/Images/Optimized-Mount_Chocorua.jpg");
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -133,13 +133,22 @@ h4{
 	line-height: 1.25;
 }
 
-#player {
+.player {
 	background-color: gray;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	width: 560px;
 	height: 315px;
+}
+
+.map {
+	background-color: gray;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 600px;
+	height: 450px;
 }
 
 .quotebox {

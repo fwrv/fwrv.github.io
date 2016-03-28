@@ -85,6 +85,12 @@ div.textbox {
 	background-color: #3366ff;
 }
 
+.atlas-chart {
+	margin: 25px;
+	width: 33%;
+	display: inline-block;
+}
+
 #making {
 	padding-top: 10px;
 }
